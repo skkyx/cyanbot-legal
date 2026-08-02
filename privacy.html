@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Política de Privacidade — CyanBot</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #0A1116;
+    --surface: #10191F;
+    --border: #1E2C34;
+    --accent: #2DD4EE;
+    --text: #E4F3F6;
+    --text-muted: #93A9B2;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'Inter', sans-serif;
+    line-height: 1.7;
+    padding: 56px 20px 100px;
+  }
+  .wrap { max-width: 760px; margin: 0 auto; }
+  h1 {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 32px;
+    margin-bottom: 4px;
+  }
+  .subtitle { color: var(--text-muted); font-size: 14px; margin-bottom: 40px; }
+  h2 {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 20px;
+    margin-top: 40px;
+    margin-bottom: 12px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid var(--border);
+    color: var(--accent);
+  }
+  p, li { color: var(--text); font-size: 15px; }
+  ul { padding-left: 20px; }
+  li { margin-bottom: 8px; }
+  .card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 16px 20px;
+    margin: 16px 0;
+  }
+  table { width: 100%; border-collapse: collapse; margin: 16px 0; font-size: 14px; }
+  th, td { text-align: left; padding: 10px 12px; border-bottom: 1px solid var(--border); }
+  th { color: var(--accent); font-family: 'Space Grotesk', sans-serif; font-weight: 600; }
+  td { color: var(--text-muted); }
+  a { color: var(--accent); }
+  code {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    padding: 2px 6px;
+    font-size: 13px;
+  }
+  footer {
+    margin-top: 56px;
+    padding-top: 20px;
+    border-top: 1px solid var(--border);
+    color: var(--text-muted);
+    font-size: 13px;
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <h1>Política de Privacidade</h1>
+  <p class="subtitle">CyanBot • Última atualização: 2 de agosto de 2026</p>
+
+  <p>Esta política explica quais informações o CyanBot ("o Bot", "nós") coleta ao ser usado no Discord, por que coletamos, e como você pode solicitar a remoção delas.</p>
+
+  <h2>1. Que dados coletamos</h2>
+  <p>O Bot só coleta dados gerados pelo uso normal dos seus comandos. Não lemos nem armazenamos o conteúdo geral das suas mensagens — apenas o que é necessário para cada funcionalidade abaixo.</p>
+
+  <table>
+    <tr><th>Dado</th><th>Onde é usado</th></tr>
+    <tr><td>ID do usuário (Discord)</td><td>Sistema de XP/nível, avisos (warns), listas de sorteio, sistema de "trabalhadores"</td></tr>
+    <tr><td>ID do servidor (Discord)</td><td>Separar configurações e dados entre servidores diferentes</td></tr>
+    <tr><td>XP, nível e contagem de avisos</td><td>Comandos <code>!level</code>, <code>!rank</code>, <code>!perfil</code>, <code>!warn</code></td></tr>
+    <tr><td>IDs de canais e cargos configurados</td><td>Comandos de configuração como <code>!trackercanal</code>, <code>!newscanal</code>, <code>!levelcanal</code>, <code>!setup</code></td></tr>
+    <tr><td>URLs de sites cadastrados para monitoramento</td><td>Sistema de rastreamento de animes e notícias (<code>!trackersite</code>, <code>!newssite</code>)</td></tr>
+    <tr><td>Dados de sorteios (prêmio, participantes, horário)</td><td>Comando <code>/giveaway</code></td></tr>
+    <tr><td>Imagens enviadas</td><td>Comandos <code>!sayembed</code> e <code>/aprimorar</code> — processadas e depois descartadas (veja seção 3)</td></tr>
+  </table>
+
+  <h2>2. Como coletamos</h2>
+  <p>Todos os dados vêm diretamente da API do Discord no momento em que você usa um comando do Bot — nunca monitoramos mensagens fora dos comandos, exceto pela verificação técnica necessária para funcionalidades como o sistema de XP (que precisa saber quando você envia uma mensagem, mas não guarda o texto dela) e a piada "mande trabalhar" (que só reage a menções diretas ao Bot).</p>
+
+  <h2>3. Serviços de terceiros</h2>
+  <p>Algumas funcionalidades do Bot dependem de serviços externos. Ao usar esses comandos, dados relevantes (nunca sua identidade do Discord) são enviados a eles:</p>
+  <div class="card">
+    <ul>
+      <li><strong>Jikan API (MyAnimeList)</strong> — recebe o texto de busca ao usar <code>!wikianime</code> ou os trackers de anime.</li>
+      <li><strong>Gifukai</strong> — fornece os GIFs usados nos comandos de roleplay (<code>!abracar</code>, <code>!beijar</code>, etc).</li>
+      <li><strong>Google Tradutor</strong> (via biblioteca deep-translator) — traduz sinopses de anime para português.</li>
+      <li><strong>Cloudinary</strong> — recebe temporariamente a imagem enviada no comando <code>/aprimorar</code> para processá-la; a imagem não fica armazenada permanentemente pelo Bot.</li>
+      <li><strong>Tenor</strong> — usado como fonte alternativa de GIFs caso a API principal de roleplay esteja fora do ar.</li>
+    </ul>
+  </div>
+  <p>Recomendamos consultar as políticas de privacidade desses serviços se tiver dúvidas sobre como eles tratam os dados que recebem.</p>
+
+  <h2>4. Onde os dados ficam armazenados</h2>
+  <p>Os dados persistentes (XP, avisos, configurações de servidor, listas de sorteio, etc) são armazenados em um banco de dados e em arquivos de configuração no servidor onde o Bot está hospedado. Não vendemos, alugamos ou compartilhamos esses dados com terceiros para fins de publicidade ou marketing.</p>
+
+  <h2>5. Por quanto tempo guardamos os dados</h2>
+  <p>Os dados ficam armazenados enquanto o Bot estiver no servidor e a funcionalidade correspondente estiver em uso. Administradores podem remover dados específicos a qualquer momento através dos próprios comandos do Bot (por exemplo, <code>!clearwarns</code>, <code>!untrack</code>, <code>/remove trabalhador</code>). Se o Bot for removido de um servidor, os dados associados àquele servidor podem ser apagados periodicamente.</p>
+
+  <h2>6. Seus direitos</h2>
+  <p>Você pode solicitar a exclusão dos seus dados armazenados pelo Bot entrando em contato com o desenvolvedor (veja seção 8). Faremos o possível para atender pedidos de exclusão dentro de um prazo razoável.</p>
+
+  <h2>7. Crianças</h2>
+  <p>O uso do Discord (e, por consequência, deste Bot) é regido pelos <a href="https://discord.com/terms" target="_blank" rel="noopener">Termos de Serviço do Discord</a>, que exigem idade mínima. Não coletamos intencionalmente dados adicionais de menores além do que a própria plataforma Discord já processa.</p>
+
+  <h2>8. Contato</h2>
+  <p>Dúvidas sobre esta política ou pedidos de remoção de dados podem ser feitos ao desenvolvedor do Bot: <strong>skky0001</strong> (via Discord).</p>
+
+  <h2>9. Alterações a esta política</h2>
+  <p>Esta política pode ser atualizada conforme o Bot ganha novas funcionalidades. Mudanças relevantes serão refletidas na data no topo desta página.</p>
+
+  <footer>CyanBot — Política de Privacidade. Este documento não constitui aconselhamento jurídico.</footer>
+</div>
+</body>
+</html>

@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Termos de Serviço — CyanBot</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #0A1116;
+    --surface: #10191F;
+    --border: #1E2C34;
+    --accent: #2DD4EE;
+    --text: #E4F3F6;
+    --text-muted: #93A9B2;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'Inter', sans-serif;
+    line-height: 1.7;
+    padding: 56px 20px 100px;
+  }
+  .wrap { max-width: 760px; margin: 0 auto; }
+  h1 {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 32px;
+    margin-bottom: 4px;
+  }
+  .subtitle { color: var(--text-muted); font-size: 14px; margin-bottom: 40px; }
+  h2 {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 20px;
+    margin-top: 40px;
+    margin-bottom: 12px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid var(--border);
+    color: var(--accent);
+  }
+  p, li { color: var(--text); font-size: 15px; }
+  ul { padding-left: 20px; }
+  li { margin-bottom: 8px; }
+  .card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 16px 20px;
+    margin: 16px 0;
+  }
+  a { color: var(--accent); }
+  code {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    padding: 2px 6px;
+    font-size: 13px;
+  }
+  footer {
+    margin-top: 56px;
+    padding-top: 20px;
+    border-top: 1px solid var(--border);
+    color: var(--text-muted);
+    font-size: 13px;
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <h1>Termos de Serviço</h1>
+  <p class="subtitle">CyanBot • Última atualização: 2 de agosto de 2026</p>
+
+  <p>Ao adicionar o CyanBot ("o Bot") ao seu servidor do Discord ou usar qualquer um de seus comandos, você concorda com estes Termos de Serviço. Se não concordar, não adicione ou utilize o Bot.</p>
+
+  <h2>1. O que o CyanBot faz</h2>
+  <p>O CyanBot oferece funcionalidades como:</p>
+  <div class="card">
+    <ul>
+      <li>Moderação (avisos, timeout, banimento, expulsão, canal isca antispam)</li>
+      <li>Sistema de níveis e experiência (XP) por servidor</li>
+      <li>Perfil, avatar e banner de usuários</li>
+      <li>Rastreamento de novos episódios de anime e notícias</li>
+      <li>Wiki de animes com busca e filtros (via MyAnimeList/Jikan)</li>
+      <li>Comandos de interação/roleplay entre membros (abraço, tapa, etc)</li>
+      <li>Criação de embeds personalizados (<code>/sayembed</code>)</li>
+      <li>Sorteios (<code>/giveaway</code>)</li>
+      <li>Aprimoramento de imagens via IA (<code>/aprimorar</code>)</li>
+      <li>Comandos de entretenimento diversos (aura, "mande trabalhar", etc)</li>
+    </ul>
+  </div>
+
+  <h2>2. Elegibilidade</h2>
+  <p>Você precisa cumprir os <a href="https://discord.com/terms" target="_blank" rel="noopener">Termos de Serviço do Discord</a>, incluindo os requisitos de idade mínima da plataforma, para usar este Bot.</p>
+
+  <h2>3. Uso aceitável</h2>
+  <p>Ao usar o Bot, você concorda em não:</p>
+  <ul>
+    <li>Utilizar os comandos de moderação, o sistema antispam ou a piada "mande trabalhar" para assediar, intimidar ou prejudicar outros usuários fora do espírito de uso pretendido;</li>
+    <li>Tentar explorar, sobrecarregar ou interferir no funcionamento normal do Bot (ex: spam de comandos, tentativas de quebrar limites de taxa das APIs utilizadas);</li>
+    <li>Usar o Bot para violar os Termos de Serviço ou Diretrizes da Comunidade do Discord;</li>
+    <li>Usar comandos como <code>/sayembed</code> ou <code>!say</code> para se passar por outra pessoa, equipe do servidor, ou o próprio Discord de forma enganosa.</li>
+  </ul>
+
+  <h2>4. Permissões e administradores</h2>
+  <p>Vários comandos exigem permissões específicas do Discord (ex: Gerenciar Mensagens, Administrador) para serem usados. A responsabilidade por conceder essas permissões e configurar o Bot corretamente em um servidor é da equipe de administração daquele servidor — não do desenvolvedor do Bot.</p>
+
+  <h2>5. Disponibilidade do serviço</h2>
+  <p>O Bot é fornecido "como está" e "conforme disponível". Não garantimos que o Bot estará sempre online, livre de erros, ou que funcionalidades dependentes de serviços de terceiros (como a API do MyAnimeList/Jikan, Cloudinary, ou provedores de GIFs) estarão sempre disponíveis. Podemos alterar, suspender ou descontinuar qualquer funcionalidade a qualquer momento.</p>
+
+  <h2>6. Limitação de responsabilidade</h2>
+  <p>Na máxima extensão permitida por lei, o desenvolvedor do CyanBot não se responsabiliza por danos indiretos, incidentais ou consequenciais resultantes do uso ou incapacidade de uso do Bot, incluindo perda de dados, banimentos indevidos causados por má configuração de comandos de moderação, ou indisponibilidade de serviços de terceiros integrados ao Bot.</p>
+
+  <h2>7. Dados e privacidade</h2>
+  <p>O uso de dados coletados pelo Bot é descrito na nossa <a href="privacy.html">Política de Privacidade</a>, que faz parte integrante destes Termos.</p>
+
+  <h2>8. Remoção do Bot</h2>
+  <p>Qualquer administrador de servidor pode remover o Bot a qualquer momento. O desenvolvedor também se reserva o direito de restringir o acesso do Bot a servidores que violem repetidamente estes Termos ou as políticas do Discord.</p>
+
+  <h2>9. Alterações a estes Termos</h2>
+  <p>Estes Termos podem ser atualizados conforme o Bot evolui. O uso continuado do Bot após alterações constitui aceitação dos novos Termos. Mudanças relevantes serão refletidas na data no topo desta página.</p>
+
+  <h2>10. Contato</h2>
+  <p>Dúvidas sobre estes Termos podem ser enviadas ao desenvolvedor do Bot: <strong>skky0001</strong> (via Discord).</p>
+
+  <footer>CyanBot — Termos de Serviço. Este documento não constitui aconselhamento jurídico.</footer>
+</div>
+</body>
+</html>
