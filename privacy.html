@@ -75,7 +75,7 @@
 <div class="wrap">
 
   <h1>Política de Privacidade</h1>
-  <p class="subtitle">CyanBot • Última atualização: 5 de agosto de 2026</p>
+  <p class="subtitle">CyanBot • Última atualização: 6 de agosto de 2026</p>
 
   <p>Esta política explica quais informações o CyanBot ("o Bot", "nós") coleta ao ser usado no Discord, por que coletamos, e como você pode solicitar a remoção delas.</p>
 
@@ -84,31 +84,33 @@
 
   <table>
     <tr><th>Dado</th><th>Onde é usado</th></tr>
-    <tr><td>ID do usuário (Discord)</td><td>Sistema de XP/nível, avisos (warns), listas de sorteio e registro de trabalhadores</td></tr>
-    <tr><td>ID do servidor (Discord)</td><td>Separar configurações e dados entre servidores diferentes</td></tr>
+    <tr><td>ID do usuário (Discord)</td><td>Sistema de XP/nível, saldo de moedas, inventário, avisos (warns), sorteios e autorização de comandos</td></tr>
+    <tr><td>ID do servidor (Discord)</td><td>Separar configurações, rankings de XP e logs de moderação entre servidores diferentes</td></tr>
     <tr><td>XP, nível e contagem de avisos</td><td>Comandos <code>!level</code>, <code>!rank</code>, <code>!perfil</code>, <code>!warn</code>, <code>!clearwarns</code></td></tr>
-    <tr><td>IDs de canais e cargos configurados</td><td>Comandos de configuração como <code>!levelcanal</code>, <code>!setup</code> e <code>/antispam</code></td></tr>
+    <tr><td>Cyan Coins, histórico de Daily e Inventário</td><td>Sistema de economia (<code>!moedas</code>, <code>!daily</code>, <code>!loja</code>, <code>!setcoins</code>) e salvamento de templates comprados</td></tr>
+    <tr><td>Dados do Perfil (Sobre Mim, URL do fundo, cores RGB)</td><td>Personalização visual do cartão de perfil (<code>!perfil</code>, <code>!setbg</code>, botões interativos)</td></tr>
+    <tr><td>IDs de canais e cargos configurados</td><td>Comandos de configuração como <code>!levelcanal</code>, <code>!levelmsg</code> e <code>/antispam</code></td></tr>
     <tr><td>Dados de sorteios (prêmio, participantes, horário)</td><td>Comando <code>/giveaway</code></td></tr>
     <tr><td>Imagens enviadas</td><td>Comando <code>!sayembed</code> — processadas instantaneamente no envio e descartadas em seguida</td></tr>
   </table>
 
   <h2>2. Como coletamos</h2>
-  <p>Todos os dados vêm diretamente da API do Discord no momento em que você usa um comando do Bot — nunca monitoramos mensagens fora dos comandos, exceto pela verificação técnica necessária para funcionalidades como o sistema de XP (que precisa saber quando você envia uma mensagem para contabilizar os pontos, mas não salva o texto das mensagens).</p>
+  <p>Todos os dados vêm diretamente da API do Discord no momento em que você usa um comando do Bot — nunca monitoramos mensagens fora dos comandos, exceto pela verificação técnica necessária para a contabilização do sistema de XP (que verifica o envio de mensagens para somar pontos e aplicar o bônus de Booster, sem salvar o texto das mensagens).</p>
 
   <h2>3. Serviços de terceiros</h2>
-  <p>Algumas funcionalidades do Bot dependem de serviços externos. Ao usar esses comandos, dados relevantes (nunca sua identidade do Discord) são enviados a eles:</p>
+  <p>Algumas funcionalidades do Bot dependem de serviços externos. Ao usar esses comandos, dados relevantes (nunca sua identidade pessoal do Discord) são enviados ou redirecionados a eles:</p>
   <div class="card">
     <ul>
       <li><strong>AniList GraphQL API</strong> — recebe as consultas de busca ao usar comandos de anime (<code>!wikianime</code>, <code>!animeseason</code>, <code>!agenda</code>).</li>
-      <li><strong>Gifukai API</strong> — fornece os GIFs animados de roleplay e ações entre membros (<code>!abracar</code>, <code>!beijar</code>, <code>!soco</code>, <code>!slap</code>, <code>!pat</code>).</li>
+      <li><strong>Gifukai API & Tenor API</strong> — fornecem os GIFs animados de roleplay e ações entre membros (<code>!abracar</code>, <code>!beijar</code>, <code>!soco</code>, <code>!slap</code>, <code>!pat</code>).</li>
       <li><strong>Google Tradutor</strong> (via biblioteca deep-translator) — traduz sinopses de animes para o português.</li>
-      <li><strong>Tenor API</strong> — fonte alternativa para exibição de GIFs de roleplay.</li>
+      <li><strong>LivePix</strong> — plataforma externa segura para doações voluntárias de apoio via Pix (<code>!apoie</code>).</li>
     </ul>
   </div>
   <p>Recomendamos consultar as políticas de privacidade desses serviços se tiver dúvidas sobre como eles tratam os dados que recebem.</p>
 
   <h2>4. Onde os dados ficam armazenados</h2>
-  <p>Os dados persistentes (XP, avisos, configurações de servidor, listas de sorteio, etc) são armazenados em um banco de dados local SQLite (<code>cyanbot.db</code>) e arquivos de configuração no servidor onde o Bot está hospedado. Não vendemos, alugamos ou compartilhamos esses dados com terceiros para fins de publicidade ou marketing.</p>
+  <p>Os dados persistentes (XP, saldo de Cyan Coins, inventário de templates, avisos, configurações de servidor, etc) são armazenados em um banco de dados local SQLite (<code>cyanbot.db</code>) no servidor de hospedagem segura do Bot. Não vendemos, alugamos ou compartilhamos esses dados com terceiros para fins de publicidade ou marketing.</p>
 
   <h2>5. Por quanto tempo guardamos os dados</h2>
   <p>Os dados ficam armazenados enquanto o Bot estiver no servidor e a funcionalidade correspondente estiver em uso. Administradores podem remover dados específicos a qualquer momento através dos próprios comandos do Bot (por exemplo, <code>!clearwarns</code>, <code>/remove trabalhador</code>, <code>/giveaway_clear</code>). Se o Bot for removido de um servidor, os dados associados àquele servidor podem ser apagados periodicamente.</p>
