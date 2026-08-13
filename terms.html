@@ -71,7 +71,7 @@
 <div class="wrap">
 
   <h1>Termos de Serviço</h1>
-  <p class="subtitle">CyanBot • Última atualização: 7 de agosto de 2026</p>
+  <p class="subtitle">CyanBot • Última atualização: 13 de agosto de 2026</p>
 
   <p>Ao adicionar o CyanBot ("o Bot") ao seu servidor do Discord ou usar qualquer um de seus comandos, você concorda com estes Termos de Serviço. Se não concordar, não adicione ou utilize o Bot.</p>
 
@@ -88,7 +88,8 @@
       <li><strong>Roleplay & Medidor de Casal</strong> (<code>!ship</code> com barra de afinidade em corações, soco, abraço, tapa, beijo, cafuné, morder, dançar, cutucar e lamber com GIFs animadas e botões de combo);</li>
       <li><strong>Criação de Embeds e Mídia</strong> (<code>!sayembed</code>, <code>!say</code>, cópia de emojis e figurinhas <code>!copiar</code> / <code>!copiarfig</code>, <code>!emojiinfo</code>);</li>
       <li><strong>Sorteios Interativos</strong> (<code>/giveaway</code> com botões de inscrição e reroll de ganhador);</li>
-      <li><strong>Apoio ao Projeto</strong> (<code>!apoie</code> via LivePix) e utilitários diversos.</li>
+      <li><strong>Apoio ao Projeto</strong> (<code>!apoie</code> via LivePix) e utilitários diversos;</li>
+      <li><strong>Dashboard Web</strong> — painel de administração separado, acessado por navegador com login via Discord, para criar e editar painéis de Reaction Roles dos servidores em que você é administrador (veja Seção 7).</li>
     </ul>
   </div>
 
@@ -114,22 +115,33 @@
   <h2>6. Permissões e Administradores</h2>
   <p>Vários comandos exigem permissões específicas do Discord (ex: Gerenciar Mensagens, Administrador). A responsabilidade por conceder essas permissões e configurar o Bot corretamente em um servidor é da equipe de administração daquele servidor — não do desenvolvedor do Bot.</p>
 
-  <h2>7. Disponibilidade do Serviço</h2>
-  <p>O Bot é fornecido "como está" e "conforme disponível". Não garantimos que o Bot estará sempre online, livre de erros, ou que funcionalidades dependentes de serviços de terceiros (como a API do AniList, Spotify ou provedores de GIFs) estarão sempre disponíveis. Podemos alterar, rebalancear a economia virtual, suspender ou descontinuar qualquer funcionalidade a qualquer momento.</p>
+  <h2>7. Dashboard Web & Login com Discord</h2>
+  <p>O CyanBot oferece um painel web separado ("Dashboard") para gerenciar Reaction Roles pela internet, em vez de comandos no Discord. Ao entrar no Dashboard, você concorda também com o seguinte:</p>
+  <ul>
+    <li>O login é feito via <strong>OAuth2 oficial do Discord</strong> — nós nunca vemos, pedimos ou armazenamos sua senha do Discord;</li>
+    <li>O login solicita permissão apenas para ler sua identidade básica (nome de usuário, avatar, ID) e a lista dos servidores em que você está, com o único objetivo de descobrir em quais servidores você é administrador e o CyanBot está presente;</li>
+    <li>Só é possível ver e editar Reaction Roles de servidores onde você tem permissão de <strong>Administrador</strong> ou <strong>Gerenciar Servidor</strong>, e onde o CyanBot já foi adicionado por alguém com essa permissão;</li>
+    <li>Toda ação feita pelo Dashboard (postar, editar ou apagar uma mensagem de Reaction Role) é executada pelo próprio Bot, nunca em seu nome pessoal — as mensagens aparecem como enviadas pelo CyanBot, não por você;</li>
+    <li>Você é responsável pelo conteúdo que configurar através do Dashboard (texto, imagens e cargos), da mesma forma que já é responsável pelo conteúdo de comandos como <code>!sayembed</code>;</li>
+    <li>Sua sessão de login fica ativa por tempo limitado e pode ser encerrada a qualquer momento clicando em "Sair" no próprio Dashboard.</li>
+  </ul>
 
-  <h2>8. Limitação de Responsabilidade</h2>
-  <p>Na máxima extensão permitida por lei, o desenvolvedor do CyanBot não se responsabiliza por danos indiretos, incidentais ou consequenciais resultantes do uso ou incapacidade de uso do Bot, incluindo perda de dados ou indisponibilidade de serviços de terceiros integrados ao Bot.</p>
+  <h2>8. Disponibilidade do Serviço</h2>
+  <p>O Bot (incluindo o Dashboard Web) é fornecido "como está" e "conforme disponível". Não garantimos que estará sempre online, livre de erros, ou que funcionalidades dependentes de serviços de terceiros (como a API do AniList, Discord, Spotify ou provedores de GIFs) estarão sempre disponíveis. Podemos alterar, rebalancear a economia virtual, suspender ou descontinuar qualquer funcionalidade a qualquer momento.</p>
 
-  <h2>9. Dados e Privacidade</h2>
-  <p>O uso de dados coletados pelo Bot é descrito na nossa <a href="privacy.html">Política de Privacidade</a>, que faz parte integrante destes Termos.</p>
+  <h2>9. Limitação de Responsabilidade</h2>
+  <p>Na máxima extensão permitida por lei, o desenvolvedor do CyanBot não se responsabiliza por danos indiretos, incidentais ou consequenciais resultantes do uso ou incapacidade de uso do Bot ou do Dashboard, incluindo perda de dados ou indisponibilidade de serviços de terceiros integrados.</p>
 
-  <h2>10. Remoção do Bot</h2>
-  <p>Qualquer administrador de servidor pode remover o Bot a qualquer momento. O desenvolvedor também se reserva o direito de restringir o acesso do Bot a servidores ou usuários que violem repetidamente estes Termos ou as políticas do Discord.</p>
+  <h2>10. Dados e Privacidade</h2>
+  <p>O uso de dados coletados pelo Bot e pelo Dashboard é descrito na nossa <a href="privacy.html">Política de Privacidade</a>, que faz parte integrante destes Termos.</p>
 
-  <h2>11. Alterações a estes Termos</h2>
-  <p>Estes Termos podem ser atualizados conforme o Bot evolui. O uso continuado do Bot após alterações constitui aceitação dos novos Termos. Mudanças relevantes serão refletidas na data no topo desta página.</p>
+  <h2>11. Remoção do Bot</h2>
+  <p>Qualquer administrador de servidor pode remover o Bot a qualquer momento. O desenvolvedor também se reserva o direito de restringir o acesso do Bot ou do Dashboard a servidores ou usuários que violem repetidamente estes Termos ou as políticas do Discord.</p>
 
-  <h2>12. Contato</h2>
+  <h2>12. Alterações a estes Termos</h2>
+  <p>Estes Termos podem ser atualizados conforme o Bot evolui. O uso continuado do Bot ou do Dashboard após alterações constitui aceitação dos novos Termos. Mudanças relevantes serão refletidas na data no topo desta página.</p>
+
+  <h2>13. Contato</h2>
   <p>Dúvidas sobre estes Termos podem ser enviadas ao desenvolvedor do Bot: <strong>skky0001</strong> (via Discord).</p>
 
   <footer>CyanBot — Termos de Serviço. Este documento não constitui aconselhamento jurídico.</footer>
