@@ -75,7 +75,7 @@
 <div class="wrap">
 
   <h1>Política de Privacidade</h1>
-  <p class="subtitle">CyanBot • Última atualização: 7 de agosto de 2026</p>
+  <p class="subtitle">CyanBot • Última atualização: 13 de agosto de 2026</p>
 
   <p>Esta política explica quais informações o CyanBot ("o Bot", "nós") coleta ao ser usado no Discord, por que coletamos, e como você pode solicitar a remoção delas.</p>
 
@@ -92,12 +92,25 @@
     <tr><td>IDs de canais e cargos configurados</td><td>Comandos de configuração como <code>!levelcanal</code>, <code>!levelmsg</code> e <code>!antispam</code></td></tr>
     <tr><td>Dados de sorteios (prêmio, participantes, horário)</td><td>Comando <code>/giveaway</code></td></tr>
     <tr><td>Imagens enviadas</td><td>Comando <code>!sayembed</code> — processadas instantaneamente no envio e descartadas em seguida</td></tr>
+    <tr><td>Configuração de Reaction Roles (canal, texto do embed, emojis, cargos vinculados, restrições de cargo)</td><td>Painéis de cargo por reação criados pelo Dashboard Web ou pelo assistente <code>!rrmake</code></td></tr>
+    <tr><td>Nome de usuário, avatar e lista de servidores (Discord, via login OAuth2)</td><td>Login e navegação no Dashboard Web (veja Seção 3)</td></tr>
   </table>
 
   <h2>2. Como coletamos</h2>
-  <p>Todos os dados vêm diretamente da API do Discord no momento em que você usa um comando do Bot — nunca monitoramos mensagens fora dos comandos, exceto pela verificação técnica necessária para a contabilização do sistema de XP (que verifica o envio de mensagens para somar pontos e aplicar o bônus de Booster, sem salvar o texto das mensagens).</p>
+  <p>A maior parte dos dados vem diretamente da API do Discord no momento em que você usa um comando do Bot — nunca monitoramos mensagens fora dos comandos, exceto pela verificação técnica necessária para a contabilização do sistema de XP (que verifica o envio de mensagens para somar pontos e aplicar o bônus de Booster, sem salvar o texto das mensagens). Os dados relacionados ao Dashboard Web são coletados apenas quando você opta por fazer login nele (veja a próxima seção).</p>
 
-  <h2>3. Serviços de terceiros</h2>
+  <h2>3. Dashboard Web (Login com Discord)</h2>
+  <p>O Dashboard Web é um site separado, acessado pelo navegador, para gerenciar Reaction Roles sem precisar usar comandos no Discord. Ele usa o sistema oficial de login OAuth2 do Discord — nunca vemos ou armazenamos sua senha.</p>
+  <table>
+    <tr><th>Dado</th><th>Por quê</th></tr>
+    <tr><td>ID, nome de usuário e avatar do Discord</td><td>Identificar você e exibir seu nome/foto no Dashboard</td></tr>
+    <tr><td>Lista de servidores em que você está e suas permissões neles</td><td>Descobrir em quais servidores você é admin e o CyanBot está presente, pra mostrar só esses no Dashboard</td></tr>
+    <tr><td>Token de acesso e token de atualização (OAuth2) do Discord</td><td>Fazer, em seu nome, as chamadas necessárias à API do Discord durante sua sessão logada (ex: listar seus servidores). Nunca usados para postar mensagens como você — mensagens de Reaction Role são sempre postadas pelo próprio Bot</td></tr>
+    <tr><td>Cookie de sessão do navegador</td><td>Manter você logado no Dashboard entre uma página e outra</td></tr>
+  </table>
+  <p>Os tokens de OAuth2 e o cookie de sessão ficam guardados temporariamente (até 7 dias ou até você clicar em "Sair", o que ocorrer primeiro) e são apagados automaticamente depois disso. Eles nunca são compartilhados com terceiros.</p>
+
+  <h2>4. Serviços de terceiros</h2>
   <p>Algumas funcionalidades do Bot dependem de serviços externos. Ao usar esses comandos, dados relevantes (nunca sua identidade pessoal do Discord) são enviados ou redirecionados a eles:</p>
   <div class="card">
     <ul>
@@ -110,23 +123,23 @@
   </div>
   <p>Recomendamos consultar as políticas de privacidade desses serviços se tiver dúvidas sobre como eles tratam os dados que recebem.</p>
 
-  <h2>4. Onde os dados ficam armazenados</h2>
-  <p>Os dados persistentes (XP, saldo de Cyan Coins, inventário de templates, avisos, configurações de servidor, etc) são armazenados em um banco de dados local SQLite (<code>cyanbot.db</code>) no servidor de hospedagem segura do Bot. Não vendemos, alugamos ou compartilhamos esses dados com terceiros para fins de publicidade ou marketing.</p>
+  <h2>5. Onde os dados ficam armazenados</h2>
+  <p>Os dados persistentes de economia, XP, avisos e configurações de servidor (XP, saldo de Cyan Coins, inventário de templates, avisos, etc) são armazenados em um banco de dados local SQLite (<code>cyanbot.db</code>) no servidor de hospedagem do Bot. Os dados de perfil, os painéis de Reaction Roles e as sessões do Dashboard Web ficam num banco de dados Redis, compartilhado apenas entre o Bot e o Dashboard — ambos hospedados de forma segura pela mesma equipe, sem acesso de terceiros. Não vendemos, alugamos ou compartilhamos nenhum desses dados com terceiros para fins de publicidade ou marketing.</p>
 
-  <h2>5. Por quanto tempo guardamos os dados</h2>
-  <p>Os dados ficam armazenados enquanto o Bot estiver no servidor e a funcionalidade correspondente estiver em uso. Administradores e usuários podem remover dados específicos a qualquer momento através dos próprios comandos do Bot (por exemplo, <code>!removespotify</code>, <code>!clearwarns</code>, <code>/giveaway_clear</code>). Se o Bot for removido de um servidor, os dados associados àquele servidor podem ser apagados periodicamente.</p>
+  <h2>6. Por quanto tempo guardamos os dados</h2>
+  <p>Os dados ficam armazenados enquanto o Bot estiver no servidor e a funcionalidade correspondente estiver em uso. Administradores e usuários podem remover dados específicos a qualquer momento através dos próprios comandos do Bot (por exemplo, <code>!removespotify</code>, <code>!clearwarns</code>, <code>/giveaway_clear</code>) ou apagando um painel de Reaction Role pelo Dashboard. Sessões e tokens do Dashboard Web expiram automaticamente em até 7 dias, ou imediatamente ao clicar em "Sair". Se o Bot for removido de um servidor, os dados associados àquele servidor podem ser apagados periodicamente.</p>
 
-  <h2>6. Seus direitos</h2>
-  <p>Você pode solicitar a exclusão dos seus dados armazenados pelo Bot entrando em contato com o desenvolvedor (veja seção 8). Faremos o possível para atender pedidos de exclusão dentro de um prazo razoável.</p>
+  <h2>7. Seus direitos</h2>
+  <p>Você pode solicitar a exclusão dos seus dados armazenados pelo Bot entrando em contato com o desenvolvedor (veja seção 9). Faremos o possível para atender pedidos de exclusão dentro de um prazo razoável.</p>
 
-  <h2>7. Crianças</h2>
-  <p>O uso do Discord (e, por consequência, deste Bot) é regido pelos <a href="https://discord.com/terms" target="_blank" rel="noopener">Termos de Serviço do Discord</a>, que exigem idade mínima. Não coletamos intencionalmente dados adicionais de menores além do que a própria plataforma Discord já processa.</p>
+  <h2>8. Crianças</h2>
+  <p>O uso do Discord (e, por consequência, deste Bot e do Dashboard) é regido pelos <a href="https://discord.com/terms" target="_blank" rel="noopener">Termos de Serviço do Discord</a>, que exigem idade mínima. Não coletamos intencionalmente dados adicionais de menores além do que a própria plataforma Discord já processa.</p>
 
-  <h2>8. Contato</h2>
+  <h2>9. Contato</h2>
   <p>Dúvidas sobre esta política ou pedidos de remoção de dados podem ser feitos ao desenvolvedor do Bot: <strong>skky0001</strong> (via Discord).</p>
 
-  <h2>9. Alterações a esta política</h2>
-  <p>Esta política pode ser atualizada conforme o Bot ganha novas funcionalidades. Mudanças relevantes serão refletidas na data no topo desta página.</p>
+  <h2>10. Alterações a esta política</h2>
+  <p>Esta política pode ser atualizada conforme o Bot e o Dashboard ganham novas funcionalidades. Mudanças relevantes serão refletidas na data no topo desta página.</p>
 
   <footer>CyanBot — Política de Privacidade. Este documento não constitui aconselhamento jurídico.</footer>
 </div>
